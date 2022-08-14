@@ -1,0 +1,16 @@
+{% extends 'advertisements/navBar.html' %}
+{% load static %}
+
+{% block title %}
+Best price
+{% endblock %}
+
+{% block content %}
+    <div class="containers">
+        <form action="" class="search-bar" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Какой телефон ищем? " name='phone_name'>
+            <button type="submit"><img src="{% static 'advertisements/../../static/images/search.png' %}" alt="search"></button>
+        </form>
+    </div>
+{% endblock %}

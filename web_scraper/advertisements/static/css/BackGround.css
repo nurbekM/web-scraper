@@ -1,0 +1,19 @@
+
+.post {
+  display: flex;
+  justify-content: center;
+}
+
+.post_content {
+  flex-grow: 0;
+  padding: 15px;
+  border: 2px solid teal;
+  margin: 15px;
+  border-radius: 12px;
+}
+
+.img {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}

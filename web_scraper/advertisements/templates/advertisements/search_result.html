@@ -1,0 +1,21 @@
+{% extends 'advertisements/navBar.html' %}
+
+{% block title %} Result {% endblock %}
+
+
+{% block content %}
+    {% if phone_list %}
+        {% for phone in phone_list %}
+            <div class="post">
+                <div class="post_content">
+                    <strong>{{ phone.get.name }}</strong>
+                    <img class="img" src="{{ phone.get.photo }}" width="100" alt="phone"/>
+                    <div class="price">{{ phone.get.price }} tg</div>
+                    <a href="{{ phone.get.link }}" target="_blank"> {{ phone.get.shop_name }} </a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Телефон не найден.</p>
+    {% endif %}
+{% endblock %}
